@@ -9,16 +9,17 @@ Usage accouting for torque-based HPC systems
 Download the latest release package, then
 
 ```bash
-tar zxvf pbstools_v1.0.0.tar.gz
+wget https://github.com/Kevinzjy/pbsacct/releases/download/v1.0.0/pbsacct_v1.0.0.tar.gz
+tar zxvf pbsacct_v1.0.0.tar.gz
 ```
 
 ## Usage
 
 ```bash
-conda activate ./pbstools
+conda activate ./pbsacct
 pbsacct \
-    -i /home/zhangjy/data/test/pbsacct/accounting_mu01 \
+    -i /var/spool/torque/server_priv/accounting \
     -s 20230101 \
     -e 20231101 \
-    -o /home/zhangjy/data/test/pbsacct/usage_mu01
+    -o /tmp/cpu_usage 
 ```
